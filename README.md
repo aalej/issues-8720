@@ -13,6 +13,21 @@ platform: macOS 15.5
 1. Create and populate `./service-account.json` with service account key values
 1. Run `export GOOGLE_APPLICATION_CREDENTIALS=./service-account.json`
 1. Run `firebase emulators:start --only=auth,firestore,functions,extensions --project=demo-project`
+   - Raises an error
+
+```
+$ firebase --version
+14.6.0
+$ export GOOGLE_APPLICATION_CREDENTIALS=./service-account.json
+$ firebase emulators:start --only=auth,firestore,functions,extensions --project=demo-project
+⚠  functions: The functions emulator is configured but there is no functions source directory. Have you run firebase init functions?
+i  emulators: Starting emulators: auth, functions, firestore, extensions
+i  emulators: Detected demo project ID "demo-project", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  emulators: Shutting down emulators.
+
+Error: Errors while reading 'extensions' in 'firebase.json'
+- Unable to refresh auth: not yet authenticated.
+```
 
 ## Notes
 
