@@ -1,4 +1,4 @@
-# Repro for iss 8720
+# Repro for issue 8720
 
 ## Versions
 
