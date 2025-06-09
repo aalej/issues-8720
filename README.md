@@ -12,7 +12,6 @@ platform: macOS 15.5
    - Run `gcloud auth revoke` and `gcloud auth application-default revoke` if you have `gcloud`
 1. Create and populate `./service-account.json` with service account key values
 1. Run `export GOOGLE_APPLICATION_CREDENTIALS=./service-account.json`
-   - Feel free to change the contents of `service-account.json`
 1. Run `firebase emulators:start --only=auth,firestore,functions,extensions --project=demo-project`
 
 ## Notes
